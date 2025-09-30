@@ -1,0 +1,360 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #003E7B;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-icon {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 24px;
+            animation: float 15s infinite linear;
+            z-index: 0;
+        }
+
+        @keyframes  float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+            }
+        }
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .login-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, .7);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .login-box h2 {
+            margin: 0 0 10px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .login-box h3 {
+            margin: 0 0 20px;
+            padding: 0;
+            color: #ccc;
+            text-align: center;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .login-box h4 {
+            margin: 0 0 15px;
+            padding: 0;
+            color: #ff4444;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .login-box .user-box {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .login-box .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+            transition: all 0.3s;
+        }
+
+        .login-box .user-box input:focus {
+            border-bottom-color: #1b68ff;
+        }
+
+        .login-box .user-box label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            padding: 0;
+            font-size: 16px;
+            color: #aaa;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .login-box .user-box input:focus ~ label,
+        .login-box .user-box input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #1b68ff;
+            font-size: 12px;
+        }
+
+        .login-box form button {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            color: #1b68ff;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            margin-top: 25px;
+            letter-spacing: 2px;
+            border-radius: 5px;
+            background: rgba(27, 104, 255, 0.1);
+            border: 1px solid #1b68ff;
+        }
+
+        .login-box button:hover {
+            background: #1b68ff;
+            color: #fff;
+            box-shadow: 0 0 5px #1b68ff,
+                        0 0 25px #1b68ff,
+                        0 0 50px #1b68ff,
+                        0 0 100px #1b68ff;
+        }
+
+        .login-box button span {
+            position: absolute;
+            display: block;
+        }
+
+        .login-box button span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #1b68ff);
+            animation: btn-anim1 1.5s linear infinite;
+        }
+
+        @keyframes  btn-anim1 {
+            0% { left: -100%; }
+            50%,100% { left: 100%; }
+        }
+
+        .login-box button span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #1b68ff);
+            animation: btn-anim2 1.5s linear infinite;
+            animation-delay: .375s;
+        }
+
+        @keyframes  btn-anim2 {
+            0% { top: -100%; }
+            50%,100% { top: 100%; }
+        }
+
+        .login-box button span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #1b68ff);
+            animation: btn-anim3 1.5s linear infinite;
+            animation-delay: .75s;
+        }
+
+        @keyframes  btn-anim3 {
+            0% { right: -100%; }
+            50%,100% { right: 100%; }
+        }
+
+        .login-box button span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #1b68ff);
+            animation: btn-anim4 1.5s linear infinite;
+            animation-delay: 1.125s;
+        }
+
+        @keyframes  btn-anim4 {
+            0% { bottom: -100%; }
+            50%,100% { bottom: 100%; }
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .logo-container i {
+            font-size: 40px;
+            color: #1b68ff;
+            margin-bottom: 8px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 480px) {
+            .login-box {
+                padding: 20px;
+                width: 85%;
+            }
+
+            .login-box h2 {
+                font-size: 20px;
+            }
+
+            .login-box h3 {
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+
+            .login-box .user-box {
+                margin-bottom: 20px;
+            }
+
+            .login-box button {
+                padding: 8px 12px;
+                font-size: 14px;
+                margin-top: 20px;
+            }
+
+            .logo-container i {
+                font-size: 35px;
+            }
+
+            .tech-icon {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .login-box {
+                padding: 15px;
+                width: 90%;
+            }
+
+            .login-box h2 {
+                font-size: 18px;
+            }
+
+            .login-box .user-box input {
+                font-size: 14px;
+            }
+
+            .login-box .user-box label {
+                font-size: 14px;
+            }
+
+            .login-box button {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Ícones de tecnologia flutuantes -->
+    <i class="fas fa-laptop tech-icon" style="top: 10%; left: 5%; animation-delay: 0s;"></i>
+    <i class="fas fa-server tech-icon" style="top: 20%; left: 15%; animation-delay: 2s;"></i>
+    <i class="fas fa-microchip tech-icon" style="top: 30%; left: 25%; animation-delay: 4s;"></i>
+    <i class="fas fa-robot tech-icon" style="top: 40%; left: 35%; animation-delay: 6s;"></i>
+    <i class="fas fa-database tech-icon" style="top: 50%; left: 45%; animation-delay: 8s;"></i>
+    <i class="fas fa-network-wired tech-icon" style="top: 60%; left: 55%; animation-delay: 10s;"></i>
+    <i class="fas fa-code tech-icon" style="top: 70%; left: 65%; animation-delay: 12s;"></i>
+    <i class="fas fa-mobile-alt tech-icon" style="top: 80%; left: 75%; animation-delay: 14s;"></i>
+    <i class="fas fa-plug tech-icon" style="top: 90%; left: 85%; animation-delay: 16s;"></i>
+    <i class="fas fa-desktop tech-icon" style="top: 15%; left: 90%; animation-delay: 18s;"></i>
+    <i class="fas fa-keyboard tech-icon" style="top: 25%; left: 80%; animation-delay: 20s;"></i>
+    <i class="fas fa-mouse tech-icon" style="top: 35%; left: 70%; animation-delay: 22s;"></i>
+    <i class="fas fa-hdd tech-icon" style="top: 45%; left: 60%; animation-delay: 24s;"></i>
+    <i class="fas fa-ethernet tech-icon" style="top: 55%; left: 50%; animation-delay: 26s;"></i>
+    <i class="fas fa-wifi tech-icon" style="top: 65%; left: 40%; animation-delay: 28s;"></i>
+    <i class="fas fa-bluetooth tech-icon" style="top: 75%; left: 30%; animation-delay: 30s;"></i>
+    <i class="fas fa-satellite-dish tech-icon" style="top: 85%; left: 20%; animation-delay: 32s;"></i>
+    <i class="fas fa-print tech-icon" style="top: 95%; left: 10%; animation-delay: 34s;"></i>
+
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+    <div>
+        
+    </div>
+
+    <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+        <!-- Session Status -->
+        
+        <div class="login-box">
+            <div class="logo-container">
+                <i class="fas fa-user-lock"></i>
+            </div>
+
+            <form method="POST" action="/login">
+                <input type="hidden" name="redirect_url" value="https://www.itel.gov.ao/">
+                <h2>Login</h2>
+                <h3>Por favor entre com seu nº de processo e senha</h3>
+
+                <!-- Validation Errors -->
+                <h4></h4>
+
+                <!-- Número de Processo -->
+                <div class="user-box">
+                    <input id="it_agent" type="text" name="it_agent" :value="old('it_agent')" required autocomplete="current-it_agent"/>
+                    <label for="it_agent"><i class="fas fa-id-card"></i> Nº de Processo</label>
+                </div>
+
+                <!-- Password -->
+                <div class="user-box">
+                    <input id="password" type="password" name="password" required autocomplete="current-password"/>
+                    <label for="password"><i class="fas fa-key"></i> Senha</label>
+                </div>
+
+                <!-- Remember Me -->
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <input id="remember_me" type="checkbox" name="remember" style="margin-right: 8px; width: auto;">
+                    <label for="remember_me" style="color: #ccc; font-size: 14px;">Manter-me conectado</label>
+                </div>
+
+                <button type="submit">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="fas fa-sign-in-alt"></i> Autenticar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    </body>

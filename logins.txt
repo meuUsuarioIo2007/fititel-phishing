@@ -1,0 +1,126 @@
+--- Log Salvo em: 2025-09-04 23:08:42 ---
+Origem: http://localhost:8000/Facebook.html
+email: example@fitite.ao
+password: 12345678
+----------------------------------------
+
+--- Log Salvo em: 2025-09-04 23:09:09 ---
+Origem: http://localhost:8000/Microsoft.html
+email: example@fitite.ao
+password: qwertyuioop00
+----------------------------------------
+
+--- Log Salvo em: 2025-09-04 23:12:42 ---
+Origem: http://localhost:8000/Amazon.html
+email: laurindo@gmail.com
+password: palavrapasse!
+----------------------------------------
+
+--- Log Salvo em: 2025-09-04 23:14:26 ---
+Origem: http://localhost:8000/Amazon.html
+email: laurindo@gmail.com
+password: aaaaaaa
+----------------------------------------
+
+--- Log Salvo em: 2025-09-04 23:16:19 ---
+Origem: http://localhost:8000/Apple.html
+email: laurindo@icloud.com
+password: 1234567890
+----------------------------------------
+
+--- Log Salvo em: 2025-09-04 23:17:15 ---
+Origem: http://localhost:8000/Instagram.html
+email: laurindo@icloud.com
+password: ppppppppp
+----------------------------------------
+
+--- Log Salvo em: 2025-09-04 23:27:17 ---
+Origem: http://localhost:1234/
+email: 926995564
+password: mauro01234
+----------------------------------------
+
+--- Log Salvo em: 2025-09-04 23:33:59 ---
+Template: Starbucks.html
+email: Laurindo Alberto
+password: 475389
+----------------------------------------
+
+--- Log Salvo em: 2025-09-04 23:41:28 ---
+Template: Facebook.html
+email: 926995564
+password: sdmask
+----------------------------------------
+
+--- Log Salvo em: 2025-09-04 23:43:22 ---
+Template: X.html
+email: laurindo@gmail.com
+password: 12345678
+----------------------------------------
+
+--- Log Salvo em: 2025-09-04 23:53:46 ---
+Template: Instagram.html
+email: brauliofernandes
+password: qwertyuiop00
+----------------------------------------
+
+--- Log Salvo em: 2025-09-04 23:55:10 ---
+Template: Instagram.html
+email: laurindo@icloud.com
+password: palavrapasse!123
+----------------------------------------
+
+--- Log Salvo em: 2025-09-05 00:12:34 ---
+Template: itel.html
+it_agent: 15703
+password: qwertyuiop
+----------------------------------------
+
+--- Log Salvo em: 2025-09-05 00:15:10 ---
+Template: itel.html
+it_agent: 15703
+password: qwertyuiop
+----------------------------------------
+
+--- Log Salvo em: 2025-09-05 00:28:52 ---
+Template: Apple.html
+session_cookie: sessionid=fake_session_73d58a4a65c5f7a6a6b0cb09c6afdb47
+email: laurindo@gmail.com
+password: 123456789
+----------------------------------------
+
+--- Log Salvo em: 2025-09-05 11:00:25 ---
+Template: Facebook.html
+session_cookie: sessionid=fake_session_a55263bed8d7599f51662838acb1244f
+email: 928171356
+password: fatima123
+----------------------------------------
+
+--- Log Salvo em: 2025-09-05 11:00:35 ---
+Template: Facebook.html
+session_cookie: sessionid=fake_session_5a2c18b78ec8ad2a1a981da907beabb0
+email: 928171356
+password: fatima123
+----------------------------------------
+
+--- Log Salvo em: 2025-09-05 11:00:35 ---
+Template: Facebook.html
+session_cookie: sessionid=fake_session_c6fefad773cb615d586264f716f7b8a7
+email: 928171356
+password: fatima123
+----------------------------------------
+
+--- Log Salvo em: 2025-09-06 16:23:12 ---
+Template: Facebook.html
+session_cookie: sessionid=fake_session_5f1556987c8607621e379e5777e2bc1e
+email: laurindoalbertoquizembo@gmail.com
+password: palavra  passe!123
+----------------------------------------
+
+--- Log Salvo em: 2025-09-24 21:57:13 ---
+Template: Instagram.html
+session_cookie: sessionid=fake_session_aca1c0856ea5dd26759057e0864d173c
+email: laurindo200728@gmail.com
+password: qwertyuiop00
+----------------------------------------
+
